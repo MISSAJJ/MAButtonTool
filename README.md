@@ -46,10 +46,15 @@ _____________MISSAJJ on 16/3/19.
 为了节约时间,提高创建按钮控件的效率,特抽出一个创建各种按钮的类方法
 
 支持：
+
 1,图片按钮 (默认居中按钮，左返回按钮，右分享按钮)
+
 2,自定义文字图片靠左靠右按钮
+
 3,按项目需求，设定了按钮样式和位置样式 
+
 4,只要修改一下分享和返回按钮图片就可以直接应用到项目中了
+
 5,由于美工给的图片素材尺寸会不同,所以按钮的frame和setImageEdgeInsets可根据项目素材情况在VC层创建后重写调整
 
 另： 导航栏左右多个按钮创建［后续抽空再实现吧］ 
@@ -74,8 +79,6 @@ MAButtonToolPostionMiddle,  //中间
 MAButtonToolPostionLeft,    //左边
 MAButtonToolPostionRight,   //右边
 }MAButtonToolPostion;
-
-
 
 
 /**
