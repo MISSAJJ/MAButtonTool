@@ -4,20 +4,15 @@
 
 `MISSAJJ`自己写的“一行搞定”快速创建导航栏按钮的工具类 
 
+封装按钮不仅仅是为了未来偷懒， 更是在训练自己的归纳和思路拓展能力， 把一个个控件都研究透了，也就等于是摸清了底层原理，所以关键还是思考和实践过程中所积累到的内容。。。
 
 
-###更新日期
-
-
-更新日期: 16-03-19 03:37:43
-
-上传MAButtonTool
-
-
-
+ 
 ###前言
 
 ![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MISSAJJ_1.JPG)
+
+
 
 【纯子开发札记～静修积微……】
 
@@ -38,7 +33,26 @@
 _____________MISSAJJ on 16/3/19.
 
 
+###更新日期
 
+
+更新日期: 16-04-05 02:33:43
+
+1、应（ForrestAlfred）的建议把@selector 做成block 形式， 所以增加了Block创建按钮方法 
+
+2、其实刚开始的时候是有想过用block来封装@selector回传的想法，后又觉得如果封装block，创建时还得多重写一个button类，还要多写几行block回调的代码，怕反而弄复杂了。
+
+3、清明休息，正好空下来思考了block的方法，喜欢用block的盆友们可以试试
+
+4、将原来的工具类代码融合进了demo项目内，便于大家下载代码直观测试
+
+
+---
+更新日期: 16-03-19 03:37:43
+
+上传MAButtonTool   
+
+---
 
 ###Why?为什么要写这个工具类？
 
@@ -84,7 +98,12 @@ MAButtonToolPostionRight,   //右边
 /**
 *  自定义图片按钮
 */
-+ (UIButton *)createButton:(NSString *)imageStr;
++ (UIButton *)createButton:(NSString * )imageStr;
+
+/**
+*  创建自定义 Block 图片按钮
+*/
++ (UIButton *)createBlockButton:(NSString * )imageStr :(ButtonBlock)block;
 /**
 *  左自定义 图片按钮
 */
@@ -104,11 +123,16 @@ MAButtonToolPostionRight,   //右边
 /**
 *  自定义 导航栏 按钮
 */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type; 
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
+/**
+*  自定义 block 导航栏 按钮
+*/
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type :(ButtonItemBlock)block;
 /**
 *  自定义 文字按钮
 */
 + (UIBarButtonItem *)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor target:(id)target action:(SEL)action;
+
 
 ```
 
@@ -119,23 +143,59 @@ MAButtonToolPostionRight,   //右边
 
 //使用方法案例:
 
-#pragma mark ==顶部右边的按钮==
-- (void)rightTopBtn
-{
-self.navigationItem.rightBarButtonItem = [MAButtonTool createButtonWithImage:@"share" position:MAButtonToolPostionRight target:self action:@selector(shareMethod) type:MAButtonToolTypeShare];
-}
-
 #pragma mark ==顶部左边的按钮==
 - (void)leftTopBtn
 {
-self.navigationItem.leftBarButtonItem = [MAButtonTool createButtonWithImage:@"set_black" position:MAButtonToolPostionLeft target:self action:@selector(goToSetup) type:MAButtonToolTypeCustom];
+
+self.navigationItem.leftBarButtonItem = [MAButtonTool createButtonWithImage:@"set_black" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom];
 }
 
 
-//单独创建右边分享按钮
-UIButton * shareBtn = [MAButtonTool createRightShareButton];
-[shareBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
-self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:shareBtn];
+#pragma mark ==单独创建自定义按钮==
+- (void)customleftTopBtn
+{
+UIButton * backBtn = [MAButtonTool createLeftBackButton];
+[backBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
+self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];}
+
+
+#pragma mark ==顶部右边的按钮==
+- (void)rightTopBtn
+{
+self.navigationItem.rightBarButtonItem = [MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight target:self action:@selector(shareMethod) type:MAButtonToolTypeShare];
+}
+
+#pragma mark == block 顶部右边的按钮==
+- (void)rightTopBlockBtn
+{
+self.navigationItem.rightBarButtonItem = [MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight type:MAButtonToolTypeShare :^(UIButton *btn) {
+
+[self shareMethod];
+NSLog(@"rightTopBlockBtn");
+
+}];
+}
+
+
+
+//创建自定义图片按钮
+UIButton * customBtn = [MAButtonTool createButton:@"114"];
+customBtn.center = self.view.center;
+[customBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
+
+[self.view addSubview:customBtn];
+
+
+
+//block方式创建图片按钮
+UIButton * blockBtn1 = [MAButtonTool createBlockButton:@"MADesignNote_Work_2" :^(UIButton *btn) {
+
+[self shareMethod];
+}];
+
+blockBtn1.frame = CGRectMake(customBtn.frame.origin.x -50 , customBtn.frame.origin.y + 100, customBtn.frame.size.width + 100, customBtn.frame.size.height + 150);
+
+[self.view addSubview:blockBtn1];
 
 
 ```
