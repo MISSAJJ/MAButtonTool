@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="o7B-SZ-fq1">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="g4m-Ea-XYx">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--MAButtonTool-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MABasicBtnViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -18,21 +18,65 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ng8-fa-KkV"/>
+                    <navigationItem key="navigationItem" title="MAButtonTool" id="ng8-fa-KkV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="320" y="-1531"/>
+            <point key="canvasLocation" x="-212" y="-3089"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Block Button-->
+        <scene sceneID="k27-kL-l9o">
+            <objects>
+                <viewController id="iYs-bK-ML6" customClass="MABlockBtnViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="2GU-qP-juN"/>
+                        <viewControllerLayoutGuide type="bottom" id="Wcx-Cz-U34"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lni-Bu-m9N">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-MJ-1gb">
+                                <rect key="frame" x="94" y="198" width="168" height="222"/>
+                                <state key="normal" title="Button" image="MADesignNote_Work_2.JPG"/>
+                            </button>
+                        </subviews>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Block Button" id="Pxv-nG-Zet"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Xs6-OJ-dyA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-205" y="-2236"/>
+        </scene>
+        <!--More BarItems-->
+        <scene sceneID="ysu-9b-7HZ">
+            <objects>
+                <viewController id="aGp-Uu-MqM" customClass="MAMoreItemsBtnViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="T0D-jd-33w"/>
+                        <viewControllerLayoutGuide type="bottom" id="GvB-gr-bDy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="JTA-iE-Czo">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="More BarItems" id="L8K-6e-4zp"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xDF-oY-N8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-157" y="-1432"/>
+        </scene>
+        <!--Basic-->
         <scene sceneID="oml-9F-QkN">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="o7B-SZ-fq1" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Basic" image="heart" id="myE-Mh-yr7"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="p6w-xm-Jga">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="barTintColor" red="1" green="1" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -41,7 +85,72 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wf9-c3-0LH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-371" y="-1525"/>
+            <point key="canvasLocation" x="-971" y="-3089"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="YNd-Ho-8p0">
+            <objects>
+                <tabBarController id="g4m-Ea-XYx" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" id="KGx-X3-lOz">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="o7B-SZ-fq1" kind="relationship" relationship="viewControllers" id="qcf-K5-psx"/>
+                        <segue destination="Hzg-7O-fjf" kind="relationship" relationship="viewControllers" id="UIH-fI-BmS"/>
+                        <segue destination="jAf-d1-JXa" kind="relationship" relationship="viewControllers" id="jM8-tA-1mh"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Uc0-2s-d8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1957" y="-2634"/>
+        </scene>
+        <!--Block-->
+        <scene sceneID="zmJ-0U-sS5">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Hzg-7O-fjf" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Block" image="star" id="ZYe-gr-utG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ZPy-9d-KBE">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iYs-bK-ML6" kind="relationship" relationship="rootViewController" id="caE-cD-1qq"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Yey-5S-n13" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-971" y="-2236"/>
+        </scene>
+        <!--More Items-->
+        <scene sceneID="TJt-G4-XRM">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jAf-d1-JXa" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="More Items" image="data" id="ftD-yi-lLk"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Ac2-Yp-TFk">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="aGp-Uu-MqM" kind="relationship" relationship="rootViewController" id="UgZ-aA-qGt"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ThV-bD-2DP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-971" y="-1420"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="MADesignNote_Work_2.JPG" width="600" height="800"/>
+        <image name="data" width="24" height="24"/>
+        <image name="heart" width="42" height="42"/>
+        <image name="star" width="42" height="42"/>
+    </resources>
+    <color key="tintColor" red="1" green="0.16632315510000001" blue="0.40399930470000001" alpha="1" colorSpace="calibratedRGB"/>
 </document>

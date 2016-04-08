@@ -16,7 +16,36 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+
+
+    //底部菜单按钮颜色
+    [[UITabBar appearance]setTintColor:[UIColor yellowColor]];
+    //底部菜单背景色
+    [[UITabBar appearance]setBarTintColor:[UIColor blackColor]];
+    //底部菜单title 选中颜色
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+                                                        NSForegroundColorAttributeName : [UIColor whiteColor]
+                                                        } forState:UIControlStateSelected];
+    
+     //底部菜单title 未选中颜色 (灰色)
+    [[UITabBarItem appearance] setTitleTextAttributes:@{
+                                                        NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:10.0f],
+                                                        NSForegroundColorAttributeName : [UIColor colorWithRed:.5 green:.5 blue:.5 alpha:1]
+                                                        } forState:UIControlStateNormal];
+
+    
+    
+    //导航栏背景色
+    [[UINavigationBar appearance]setBarTintColor:[UIColor blackColor]];
+    [[UINavigationBar appearance]setTitleTextAttributes:@{
+                                                          NSFontAttributeName : [UIFont fontWithName:@"HelveticaNeue-Bold" size:15.0f],
+                                                         NSForegroundColorAttributeName : [UIColor yellowColor] }];
+    
+    
+    //statusbar颜色－白
+    [[UIApplication sharedApplication]setStatusBarStyle:UIStatusBarStyleLightContent animated:NO];
     return YES;
 }
 

@@ -34,9 +34,13 @@ _____________MISSAJJ on 16/3/19.
 
 
 ###更新日期
+更新日期: 16-04-09 00:49:43  （ 版本号 1.1 Build2 ）
 
+1、进一步完善demo演示
+2、增加创建多个按钮的演示
 
-更新日期: 16-04-05 02:33:43
+---
+更新日期: 16-04-05 02:33:43   （ 版本号 1.0 Build1 ）
 
 1、应（ForrestAlfred）的建议把@selector 做成block 形式， 所以增加了Block创建按钮方法 
 
@@ -95,6 +99,8 @@ MAButtonToolPostionRight,   //右边
 }MAButtonToolPostion;
 
 
+ 
+
 /**
 *  自定义图片按钮
 */
@@ -105,11 +111,11 @@ MAButtonToolPostionRight,   //右边
 */
 + (UIButton *)createBlockButton:(NSString * )imageStr :(ButtonBlock)block;
 /**
-*  左自定义 图片按钮
+*  左按钮
 */
 +(UIButton *)createLeftButton:(NSString *)imageStr;
 /**
-*  右自定义 图片按钮
+*  右按钮
 */
 +(UIButton*)createRightButton:(NSString*)imageStr;
 /**
@@ -127,7 +133,7 @@ MAButtonToolPostionRight,   //右边
 /**
 *  自定义 block 导航栏 按钮
 */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type :(ButtonItemBlock)block;
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
 /**
 *  自定义 文字按钮
 */
@@ -150,7 +156,9 @@ MAButtonToolPostionRight,   //右边
 self.navigationItem.leftBarButtonItem = [MAButtonTool createButtonWithImage:@"set_black" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom];
 }
 
+```
 
+```objective-c
 #pragma mark ==单独创建自定义按钮==
 - (void)customleftTopBtn
 {
@@ -158,13 +166,18 @@ UIButton * backBtn = [MAButtonTool createLeftBackButton];
 [backBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
 self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc]initWithCustomView:backBtn];}
 
+```
 
+```objective-c
 #pragma mark ==顶部右边的按钮==
 - (void)rightTopBtn
 {
 self.navigationItem.rightBarButtonItem = [MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight target:self action:@selector(shareMethod) type:MAButtonToolTypeShare];
 }
 
+```
+
+```objective-c
 #pragma mark == block 顶部右边的按钮==
 - (void)rightTopBlockBtn
 {
@@ -176,7 +189,9 @@ NSLog(@"rightTopBlockBtn");
 }];
 }
 
+```
 
+```objective-c
 
 //创建自定义图片按钮
 UIButton * customBtn = [MAButtonTool createButton:@"114"];
@@ -185,7 +200,9 @@ customBtn.center = self.view.center;
 
 [self.view addSubview:customBtn];
 
+```
 
+```objective-c
 
 //block方式创建图片按钮
 UIButton * blockBtn1 = [MAButtonTool createBlockButton:@"MADesignNote_Work_2" :^(UIButton *btn) {
@@ -197,8 +214,49 @@ blockBtn1.frame = CGRectMake(customBtn.frame.origin.x -50 , customBtn.frame.orig
 
 [self.view addSubview:blockBtn1];
 
+```
+
+```objective-c
+
+#pragma mark ==顶部左边的按钮==
+- (void)leftMoreBtn
+{
+self.navigationItem.leftBarButtonItems = @[
+[MAButtonTool createButtonWithImage:@"back" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom],
+[MAButtonTool createButtonWithImage:@"list" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom],
+[MAButtonTool createButtonWithImage:@"data" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom]
+];
+}
 
 ```
+
+```objective-c
+#pragma mark == block 顶部右边的按钮==
+- (void)rightMoreBtn
+{
+self.navigationItem.rightBarButtonItems =@[
+[MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight type:MAButtonToolTypeShare actionBlock:^(UIButton *btn) {
+
+[self shareMethod];
+NSLog(@"rightTopBlockBtn");
+
+}],
+
+[MAButtonTool createButtonWithImage:@"set" position:MAButtonToolPostionRight type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
+
+[self shareMethod];
+NSLog(@"rightTopBlockBtn");
+
+}]
+];
+}
+
+
+
+```
+
+
+
 
 
 ###Other其他
