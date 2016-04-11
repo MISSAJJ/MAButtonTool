@@ -16,18 +16,18 @@
 typedef void(^ButtonBlock)(UIButton* btn);
 typedef void(^ButtonItemBlock)(UIButton* btn);
 /** 按钮样式 */
-typedef enum {
+typedef NS_ENUM(NSInteger,MAButtonToolType) {
     MAButtonToolTypeCustom,   //自定义
     MAButtonToolTypeShare,    //分享按钮
     MAButtonToolTypeBack,  //返回按钮
-}MAButtonToolType;
+};
 
 /** 位置样式 */
-typedef enum {
+typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
     MAButtonToolPostionMiddle,  //中间
     MAButtonToolPostionLeft,    //左边
     MAButtonToolPostionRight,   //右边
-}MAButtonToolPostion;
+};
 
 @interface MAButtonTool : NSObject
 /**
