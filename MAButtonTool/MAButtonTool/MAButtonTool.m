@@ -29,13 +29,21 @@
 @implementation MAButtonTool 
 
 #pragma mark ==[自定义图片按钮]==
-+ (UIButton *)createButton:(NSString * __nullable)imageStr
++ (UIButton *)createButton:(id)imageStr
 {
-    UIImage * image = [UIImage imageNamed:imageStr];
+    
     UIButton* btn= [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 40, 40);
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    
+    //判定UIImage图片或NSString
+    if ([imageStr isKindOfClass:[UIImage class]]) {
+      [btn setImage:imageStr forState:UIControlStateNormal];
+        
+    }else{
+    UIImage * image = [UIImage imageNamed:imageStr];
     [btn setImage:image forState:UIControlStateNormal];
+    }
     //按钮发光
     [btn setShowsTouchWhenHighlighted:YES];
     [btn setAdjustsImageWhenHighlighted:YES]; 
@@ -43,13 +51,20 @@
 }
 
 #pragma mark ==[创建自定义 Block 图片按钮]==
-+ (UIButton *)createBlockButton:(NSString *)imageStr :(ButtonBlock)block
++ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block
 {
-    UIImage * image = [UIImage imageNamed:imageStr];
     UIButton* btn= [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 40, 40);
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
-    [btn setImage:image forState:UIControlStateNormal];
+    
+    //判定UIImage图片或NSString
+    if ([imageStr isKindOfClass:[UIImage class]]) {
+        [btn setImage:imageStr forState:UIControlStateNormal];
+        
+    }else{
+        UIImage * image = [UIImage imageNamed:imageStr];
+        [btn setImage:image forState:UIControlStateNormal];
+    }
     //按钮发光
     //[btn setShowsTouchWhenHighlighted:YES];
     [btn setAdjustsImageWhenHighlighted:YES];
@@ -65,7 +80,7 @@
     return btn;
 }
 #pragma mark ==[左按钮]==
-+ (UIButton *)createLeftButton:(NSString *)imageStr
++ (UIButton *)createLeftButton:(id)imageStr
 {
     UIButton* btn= [self createButton:imageStr];
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
@@ -73,7 +88,7 @@
 }
 
 #pragma mark ==[右按钮]==
-+ (UIButton*)createRightButton:(NSString*)imageStr
++ (UIButton*)createRightButton:(id)imageStr
 {
     UIButton* btn=[self createButton:imageStr];
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
@@ -100,7 +115,7 @@
 }
 
 #pragma mark ==[自定义 导航栏 按钮]==
-+(UIBarButtonItem *)createButtonWithImage:(NSString * __nullable)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type
 {
     UIButton* btn;
     
@@ -131,7 +146,7 @@
 
 
 #pragma mark ==[自定义 block 导航栏 按钮]==
-+(UIBarButtonItem *)createButtonWithImage:(NSString * __nullable)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block
 {
     UIButton* btn;
     

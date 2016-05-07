@@ -35,12 +35,6 @@
                     <view key="view" contentMode="scaleToFill" id="lni-Bu-m9N">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VKn-MJ-1gb">
-                                <rect key="frame" x="94" y="198" width="168" height="222"/>
-                                <state key="normal" title="Button" image="MADesignNote_Work_2.JPG"/>
-                            </button>
-                        </subviews>
                         <color key="tintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <navigationItem key="navigationItem" title="Block Button" id="Pxv-nG-Zet"/>
@@ -67,6 +61,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xDF-oY-N8w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-157" y="-1432"/>
+        </scene>
+        <!--FontAwesome-->
+        <scene sceneID="V2l-Bv-gOc">
+            <objects>
+                <viewController id="gyy-8R-Ysh" userLabel="FontAwesome" customClass="MAFontAwesomeViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="QLB-Kj-0yj"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dcy-xU-DSy"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pft-BX-e2n">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="FontAwesome" id="Xgk-q2-ozW"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ldz-OG-zYE" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-149" y="-504"/>
         </scene>
         <!--Basic-->
         <scene sceneID="oml-9F-QkN">
@@ -101,6 +114,7 @@
                         <segue destination="o7B-SZ-fq1" kind="relationship" relationship="viewControllers" id="qcf-K5-psx"/>
                         <segue destination="Hzg-7O-fjf" kind="relationship" relationship="viewControllers" id="UIH-fI-BmS"/>
                         <segue destination="jAf-d1-JXa" kind="relationship" relationship="viewControllers" id="jM8-tA-1mh"/>
+                        <segue destination="0oe-ZU-gYq" kind="relationship" relationship="viewControllers" id="Et1-ev-GBk"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Uc0-2s-d8I" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -145,11 +159,30 @@
             </objects>
             <point key="canvasLocation" x="-971" y="-1420"/>
         </scene>
+        <!--FontAwesome-->
+        <scene sceneID="46y-lN-0Oi">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0oe-ZU-gYq" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="FontAwesome" image="list" id="THJ-Y0-c2h"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="ACQ-Ta-sCX">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="gyy-8R-Ysh" kind="relationship" relationship="rootViewController" id="pR5-Oe-KJf"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BJd-uo-t3R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-983" y="-536"/>
+        </scene>
     </scenes>
     <resources>
-        <image name="MADesignNote_Work_2.JPG" width="600" height="800"/>
-        <image name="data" width="24" height="24"/>
+        <image name="data" width="42" height="42"/>
         <image name="heart" width="42" height="42"/>
+        <image name="list" width="64" height="64"/>
         <image name="star" width="42" height="42"/>
     </resources>
     <color key="tintColor" red="1" green="0.16632315510000001" blue="0.40399930470000001" alpha="1" colorSpace="calibratedRGB"/>

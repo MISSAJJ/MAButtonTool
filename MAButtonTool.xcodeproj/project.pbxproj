@@ -16,6 +16,12 @@
 		1CC61C931CB2C14800AB447A /* MAButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C901CB2C14800AB447A /* MAButtonTool.m */; };
 		1CC61C971CB2C1C100AB447A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC61C961CB2C1C100AB447A /* UIKit.framework */; };
 		1CC61C9A1CB2D45A00AB447A /* UIButton+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C991CB2D45A00AB447A /* UIButton+block.m */; };
+		1CFFE8121CDE322000A366AD /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80A1CDE322000A366AD /* FAImageView.m */; };
+		1CFFE8131CDE322000A366AD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */; };
+		1CFFE8141CDE322000A366AD /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */; };
+		1CFFE8151CDE322000A366AD /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */; };
+		1CFFE8161CDE322000A366AD /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */; };
+		1CFFE8191CDE369900A366AD /* MAFontAwesomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */; };
 		441FE30B1CB37CFC009ECF6A /* MABlockBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */; };
 		441FE30E1CB37D1F009ECF6A /* MABasicBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE30D1CB37D1F009ECF6A /* MABasicBtnViewController.m */; };
 		441FE3111CB37D40009ECF6A /* MAMoreItemsBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE3101CB37D40009ECF6A /* MAMoreItemsBtnViewController.m */; };
@@ -38,6 +44,17 @@
 		1CC61C961CB2C1C100AB447A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CC61C981CB2D45A00AB447A /* UIButton+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+block.h"; sourceTree = "<group>"; };
 		1CC61C991CB2D45A00AB447A /* UIButton+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+block.m"; sourceTree = "<group>"; };
+		1CFFE8091CDE322000A366AD /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
+		1CFFE80A1CDE322000A366AD /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
+		1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		1CFFE80C1CDE322000A366AD /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		1CFFE80E1CDE322000A366AD /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		1CFFE8101CDE322000A366AD /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
+		1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
+		1CFFE8171CDE369900A366AD /* MAFontAwesomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFontAwesomeViewController.h; sourceTree = "<group>"; };
+		1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFontAwesomeViewController.m; sourceTree = "<group>"; };
 		441FE3091CB37CFC009ECF6A /* MABlockBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABlockBtnViewController.h; sourceTree = "<group>"; };
 		441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABlockBtnViewController.m; sourceTree = "<group>"; };
 		441FE30C1CB37D1F009ECF6A /* MABasicBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABasicBtnViewController.h; sourceTree = "<group>"; };
@@ -81,6 +98,7 @@
 		1CC61C761CB2C10D00AB447A /* MAButtonTool */ = {
 			isa = PBXGroup;
 			children = (
+				1CFFE8081CDE322000A366AD /* FontAwesome */,
 				1CC61C8E1CB2C14800AB447A /* MAButtonTool */,
 				1CC61C7A1CB2C10D00AB447A /* AppDelegate.h */,
 				1CC61C7B1CB2C10D00AB447A /* AppDelegate.m */,
@@ -92,6 +110,8 @@
 				441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */,
 				441FE30F1CB37D40009ECF6A /* MAMoreItemsBtnViewController.h */,
 				441FE3101CB37D40009ECF6A /* MAMoreItemsBtnViewController.m */,
+				1CFFE8171CDE369900A366AD /* MAFontAwesomeViewController.h */,
+				1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */,
 				1CC61C801CB2C10D00AB447A /* Main.storyboard */,
 				1CC61C831CB2C10D00AB447A /* Assets.xcassets */,
 				1CC61C851CB2C10D00AB447A /* LaunchScreen.storyboard */,
@@ -118,6 +138,22 @@
 				1CC61C901CB2C14800AB447A /* MAButtonTool.m */,
 			);
 			path = MAButtonTool;
+			sourceTree = "<group>";
+		};
+		1CFFE8081CDE322000A366AD /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				1CFFE8091CDE322000A366AD /* FAImageView.h */,
+				1CFFE80A1CDE322000A366AD /* FAImageView.m */,
+				1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */,
+				1CFFE80C1CDE322000A366AD /* NSString+FontAwesome.h */,
+				1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */,
+				1CFFE80E1CDE322000A366AD /* UIFont+FontAwesome.h */,
+				1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */,
+				1CFFE8101CDE322000A366AD /* UIImage+FontAwesome.h */,
+				1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */,
+			);
+			path = FontAwesome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -152,7 +188,6 @@
 				TargetAttributes = {
 					1CC61C731CB2C10C00AB447A = {
 						CreatedOnToolsVersion = 7.3;
-						DevelopmentTeam = ASN7R89ET5;
 					};
 				};
 			};
@@ -182,6 +217,7 @@
 				1CC61C871CB2C10D00AB447A /* LaunchScreen.storyboard in Resources */,
 				1CC61C841CB2C10D00AB447A /* Assets.xcassets in Resources */,
 				1CC61C821CB2C10D00AB447A /* Main.storyboard in Resources */,
+				1CFFE8131CDE322000A366AD /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -192,11 +228,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1CFFE8141CDE322000A366AD /* NSString+FontAwesome.m in Sources */,
+				1CFFE8121CDE322000A366AD /* FAImageView.m in Sources */,
+				1CFFE8191CDE369900A366AD /* MAFontAwesomeViewController.m in Sources */,
 				1CC61C9A1CB2D45A00AB447A /* UIButton+block.m in Sources */,
 				1CC61C7F1CB2C10D00AB447A /* MABaseViewController.m in Sources */,
+				1CFFE8151CDE322000A366AD /* UIFont+FontAwesome.m in Sources */,
 				1CC61C931CB2C14800AB447A /* MAButtonTool.m in Sources */,
 				1CC61C7C1CB2C10D00AB447A /* AppDelegate.m in Sources */,
 				441FE30E1CB37D1F009ECF6A /* MABasicBtnViewController.m in Sources */,
+				1CFFE8161CDE322000A366AD /* UIImage+FontAwesome.m in Sources */,
 				1CC61C791CB2C10D00AB447A /* main.m in Sources */,
 				441FE30B1CB37CFC009ECF6A /* MABlockBtnViewController.m in Sources */,
 				441FE3111CB37D40009ECF6A /* MAMoreItemsBtnViewController.m in Sources */,

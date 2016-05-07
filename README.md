@@ -34,7 +34,15 @@ _____________MISSAJJ
 
 
 ###更新日期
+更新日期: 16-05-08 00:35  （ 版本号 1.2 Build3 ）
 
+1、支持FontAwesome图标创建按钮 
+
+2、调整MAButtonTool的内核，支持UIImage和NSString两种方式创建按钮
+
+3、感谢（ForrestAlfred）对于FontAwesome使用的启发
+
+--- 
 
 更新日期: 16-04-11 18:18:43  （ 版本号 1.1 Build2 ）
 
@@ -88,17 +96,18 @@ _____________MISSAJJ
 
 6，支持导航栏多个按钮创建
 
+7，支持FontAwesome图标创建按钮 
 
 
 ###Demo演示（请耐心等待demo图片加载）
 
-
+以下演示图中新增的支持FontAwesome图标创建按钮的GIF演示还来不及更新， 等后期有空再重新做演示Gif吧，抱歉！
 
 ![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MAButtonTool.gif)
 
 
-
-###Void＃请求方法
+###请求方法和样式概览################################################
+ 
 
 ```objective-c
 
@@ -120,22 +129,22 @@ MAButtonToolPostionRight,   //右边
  
 
 /**
-*  自定义图片按钮
+*  自定义图片按钮  ， 请传递UIImage或者NSString
 */
-+ (UIButton *)createButton:(NSString * )imageStr;
++ (UIButton *)createButton:(id)imageStr;
 
 /**
-*  创建自定义 Block 图片按钮
+*  创建自定义 Block 图片按钮  ， 请传递UIImage或者NSString
 */
-+ (UIButton *)createBlockButton:(NSString * )imageStr :(ButtonBlock)block;
++ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block;
 /**
-*  左按钮
+*  左按钮  ， 请传递UIImage或者NSString
 */
-+(UIButton *)createLeftButton:(NSString *)imageStr;
++(UIButton *)createLeftButton:(id)imageStr;
 /**
-*  右按钮
+*  右按钮  ， 请传递UIImage或者NSString
 */
-+(UIButton*)createRightButton:(NSString*)imageStr;
++(UIButton*)createRightButton:(id)imageStr;
 /**
 *  左返回按钮
 */
@@ -145,13 +154,13 @@ MAButtonToolPostionRight,   //右边
 */
 +(UIButton*)createRightShareButton;
 /**
-*  自定义 导航栏 按钮
+*  自定义 导航栏 按钮 ， 请传递UIImage或者NSString
 */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
 /**
-*  自定义 block 导航栏 按钮
+*  自定义 block 导航栏 按钮  ， 请传递UIImage或者NSString
 */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
 /**
 *  自定义 文字按钮
 */
@@ -160,7 +169,72 @@ MAButtonToolPostionRight,   //右边
 
 ```
 
-###Void＃使用方法################################################
+
+
+###FontAwesome 使用方法################################################
+
+
+（请耐心等待图片加载） 
+
+![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/FontAwesomeSetting.png)
+
+
+```objective-c 
+
+/*
+更新日期： 2016年5月8日
+使用方法：
+1，引入ios-fontawesome，具体使用方法和源代码地址请看原作者Github描述
+https://github.com/alexdrone/ios-fontawesome
+
+2，重要：在项目工程 Info.plist 添加 Fonts provided by application --> FontAwesome.ttf
+
+3，关于FontAwesome图标的代码，请参看 http://fortawesome.github.io/Font-Awesome/icons
+
+4，头部引入UIImage+FontAwesome.h
+
+*/
+
+
+
+#pragma mark == 顶部左边的FontAwesome block 按钮==
+- (void)leftFontAwesomeBlockBtn
+{
+//创建FontAwesome按钮
+UIImage *icon = [UIImage imageWithIcon:@"fa-github" backgroundColor:nil iconColor:[UIColor whiteColor] fontSize:30];
+
+
+self.navigationItem.leftBarButtonItem =
+[MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionLeft type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
+
+[self shareMethod];
+NSLog(@"leftTopFontAwesomeBlockBtn");
+
+}];
+}
+
+#pragma mark ==顶部右边的FontAwesome block 按钮==
+- (void)rightFontAwesomeBlockBtn
+{
+
+//创建FontAwesome按钮
+UIImage *icon = [UIImage imageWithIcon:@"fa-futbol-o" backgroundColor:nil iconColor:[UIColor whiteColor] fontSize:25];
+
+
+self.navigationItem.rightBarButtonItem =
+[MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionRight type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
+
+[self shareMethod];
+NSLog(@"rightTopFontAwesomeBlockBtn");
+
+}];
+}
+
+
+```
+
+
+###IOS原生按钮的创建使用方法案例################################################
 
 
 ```objective-c

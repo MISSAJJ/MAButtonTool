@@ -48,7 +48,8 @@
         [self shareMethod];
         NSLog(@"rightTopBlockBtn");
         
-    }];}
+    }];
+}
 
 
 

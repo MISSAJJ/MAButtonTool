@@ -36,22 +36,22 @@ typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
 @property (nonatomic,assign)MAButtonToolType type;
 
 /**
- *  自定义图片按钮
+ *  自定义图片按钮  ， 请传递UIImage或者NSString
  */
-+ (UIButton *)createButton:(NSString * )imageStr;
++ (UIButton *)createButton:(id)imageStr;
 
  /**
- *  创建自定义 Block 图片按钮
+ *  创建自定义 Block 图片按钮  ， 请传递UIImage或者NSString
  */
-+ (UIButton *)createBlockButton:(NSString * )imageStr :(ButtonBlock)block;
++ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block;
 /**
- *  左按钮
+ *  左按钮  ， 请传递UIImage或者NSString
  */
-+(UIButton *)createLeftButton:(NSString *)imageStr;
++(UIButton *)createLeftButton:(id)imageStr;
 /**
- *  右按钮
+ *  右按钮  ， 请传递UIImage或者NSString
  */
-+(UIButton*)createRightButton:(NSString*)imageStr;
++(UIButton*)createRightButton:(id)imageStr;
 /**
  *  左返回按钮
  */
@@ -61,13 +61,13 @@ typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
  */
 +(UIButton*)createRightShareButton;
 /**
- *  自定义 导航栏 按钮
+ *  自定义 导航栏 按钮 ， 请传递UIImage或者NSString
  */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
 /**
- *  自定义 block 导航栏 按钮
+ *  自定义 block 导航栏 按钮  ， 请传递UIImage或者NSString
  */
-+(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
++(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
 /**
  *  自定义 文字按钮
  */

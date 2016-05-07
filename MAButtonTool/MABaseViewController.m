@@ -24,18 +24,20 @@
     //解决navi显示后会自动调整为去掉导航栏的高度的，控件会自动在导航栏以下摆放的问题
     self.edgesForExtendedLayout = UIRectEdgeBottom | UIRectEdgeLeft | UIRectEdgeRight;
     
-    //模糊背景
-    UIImage *backImg = [self blurryImage:[UIImage imageNamed:@"MADesignNote_Work_2"] withBlurLevel:0.5];
-    UIImageView * imageV = [[UIImageView alloc]initWithImage:backImg];
-    imageV. contentMode = UIViewContentModeScaleAspectFill;
-    imageV.frame = self.view.frame;
-    [self.view addSubview:imageV];
+    //创建模糊背景
+    [self setBlurImageBackground];
     
-     //创建自定义图片按钮
+    //创建自定义图片按钮
+    [self setCustomImageButton];
+    
+  
+}
+//创建自定义图片按钮
+- (void)setCustomImageButton{
+
     UIButton * customBtn = [MAButtonTool createButton:@"music"];
     customBtn.center = self.view.center;
     [customBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
-    
     [self.view addSubview:customBtn];
     
     
@@ -58,10 +60,19 @@
     blockBtn1.layer.borderWidth=4.0f; //边框宽度
     blockBtn1.layer.borderColor=[[UIColor whiteColor] CGColor];//边框颜色
     [shadowView addSubview:blockBtn1];
+
+
+}
+//创建模糊背景
+- (void)setBlurImageBackground{
+
     
-    
-    
-  
+    UIImage *backImg = [self blurryImage:[UIImage imageNamed:@"MADesignNote_Work_2"] withBlurLevel:0.5];
+    UIImageView * imageV = [[UIImageView alloc]initWithImage:backImg];
+    imageV. contentMode = UIViewContentModeScaleAspectFill;
+    imageV.frame = self.view.frame;
+    [self.view addSubview:imageV];
+
 }
 
 - (void)shareMethod {
