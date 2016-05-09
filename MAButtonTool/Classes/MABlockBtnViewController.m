@@ -33,8 +33,8 @@
     self.navigationItem.leftBarButtonItem =
     [MAButtonTool createButtonWithImage:@"set" position:MAButtonToolPostionLeft type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
         
-        [self shareMethod];
-        NSLog(@"rightTopBlockBtn");
+        [self showHUDText:@"Left Block UIBarButtonItem" detailStr:@"+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block"];
+      
         
     }];
 }
@@ -45,13 +45,11 @@
     self.navigationItem.rightBarButtonItem =
     [MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight type:MAButtonToolTypeShare actionBlock:^(UIButton *btn) {
         
-        [self shareMethod];
-        NSLog(@"rightTopBlockBtn");
+        
+        [self showHUDText:@"Right Block UIBarButtonItem" detailStr:@"+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block"];
         
     }];
 }
-
-
 
 
 @end

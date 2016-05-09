@@ -34,6 +34,17 @@ _____________MISSAJJ
 
 
 ###更新日期
+更新日期: 16-05-09 14:11  （ 版本号 1.3 Build4 ）
+
+1、调整Demo文件夹分类
+
+2、融入MAHUDTool,点击按钮后显示用法提示
+
+3、制作最新的demo演示动画GIF图
+
+（因项目所涉及到的第三方资源比较少， 所以暂时没有用cocoapods） 
+
+---  
 更新日期: 16-05-08 00:35  （ 版本号 1.2 Build3 ）
 
 1、支持FontAwesome图标创建按钮 
@@ -43,7 +54,6 @@ _____________MISSAJJ
 3、感谢（ForrestAlfred）对于FontAwesome使用的启发
 
 --- 
-
 更新日期: 16-04-11 18:18:43  （ 版本号 1.1 Build2 ）
 
 1、增加Demo演示动图
@@ -99,11 +109,11 @@ _____________MISSAJJ
 7，支持FontAwesome图标创建按钮 
 
 
-###Demo演示（请耐心等待demo图片加载）
+###Demo演示（GIF动画演示图有1.5M,请耐心等待demo动画加载）
 
-以下演示图中新增的支持FontAwesome图标创建按钮的GIF演示还来不及更新， 等后期有空再重新做演示Gif吧，抱歉！
 
-![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MAButtonTool.gif)
+
+![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MAButtonTool2.gif)
 
 
 ###请求方法和样式概览################################################

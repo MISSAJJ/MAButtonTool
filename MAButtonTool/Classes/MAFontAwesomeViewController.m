@@ -44,8 +44,8 @@
     self.navigationItem.leftBarButtonItem =
     [MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionLeft type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
         
-        [self shareMethod];
-        NSLog(@"leftTopFontAwesomeBlockBtn");
+        
+      [self showHUDText:@"FontAwesome Block UIBarButtonItem" detailStr:@"\nUIImage *icon = [UIImage imageWithIcon:@\"fa-github\" backgroundColor:nil iconColor:[UIColor whiteColor] fontSize:30];\n\n[MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionLeft type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) { }];"];
         
     }];
 }
@@ -55,14 +55,13 @@
 {
     
     //创建FontAwesome按钮
-    UIImage *icon = [UIImage imageWithIcon:@"fa-futbol-o" backgroundColor:nil iconColor:[UIColor whiteColor] fontSize:25];
+    UIImage *icon = [UIImage imageWithIcon:@"fa-futbol-o" backgroundColor:nil iconColor:[UIColor yellowColor] fontSize:25];
     
     
     self.navigationItem.rightBarButtonItem =
     [MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionRight type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) {
         
-        [self shareMethod];
-        NSLog(@"rightTopFontAwesomeBlockBtn");
+      [self showHUDText:@"FontAwesome Block UIBarButtonItem" detailStr:@"\nUIImage *icon = [UIImage imageWithIcon:@\"fa-futbol-o\" backgroundColor:nil iconColor:[UIColor yellowColor] fontSize:25];\n\n[MAButtonTool createButtonWithImage:icon position:MAButtonToolPostionRight type:MAButtonToolTypeCustom actionBlock:^(UIButton *btn) { }];"];
         
     }];
 }

@@ -9,12 +9,14 @@
 #import "MABaseViewController.h"
 #import "MAButtonTool.h"
 #import <Accelerate/Accelerate.h>
-
+#import "UIImage+FontAwesome.h"
+#import "MAHUDTool.h"
 @interface MABaseViewController ()
 
 @end
 
 @implementation MABaseViewController
+
 
 - (void)viewDidLoad {
     
@@ -30,14 +32,54 @@
     //创建自定义图片按钮
     [self setCustomImageButton];
     
+    
+    //创建FontAwesomeBlock按钮
+    [self setFontAwesomeBlockButton];
+    
   
+}
+
+//创建FontAwesomeBlock按钮
+- (void)setFontAwesomeBlockButton{
+
+    //创建FontAwesome按钮
+    UIImage *icon = [UIImage imageWithIcon:@"fa-github" backgroundColor:nil iconColor:[UIColor whiteColor] fontSize:45];
+    
+    
+    
+    //block方式创建图片按钮
+    UIButton * blockAwesomeBtn =  [MAButtonTool createBlockButton:icon :^(UIButton *btn) {
+      
+        [self showHUDText:@"FontAwesome Block Button" detailStr:@"+ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block"];
+        
+        
+        
+    }];
+
+    
+    blockAwesomeBtn.center = self.view.center;
+    CGRect rect  = blockAwesomeBtn.frame;
+    rect.size  = CGSizeMake(50, 50);
+    rect.origin.y += 100;
+    blockAwesomeBtn.frame = rect;
+    blockAwesomeBtn.backgroundColor = [UIColor redColor];
+    blockAwesomeBtn.layer.masksToBounds = YES;
+    blockAwesomeBtn.layer.cornerRadius = blockAwesomeBtn.frame.size.height * 0.5;
+    [self.view addSubview:blockAwesomeBtn];
+ 
+}
+
+- (void)clickCustomButton
+{
+    [self showHUDText:@"Custom Button" detailStr:@"+ (UIButton *)createButton:(id)imageStr"];
+
 }
 //创建自定义图片按钮
 - (void)setCustomImageButton{
 
     UIButton * customBtn = [MAButtonTool createButton:@"music"];
     customBtn.center = self.view.center;
-    [customBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
+    [customBtn addTarget:self action:@selector(clickCustomButton) forControlEvents:UIControlEventTouchUpInside];
     [self.view addSubview:customBtn];
     
     
@@ -195,5 +237,16 @@
     return returnImage;
 }
 
-
+- (void)showHUDText:(NSString*)str detailStr:(NSString*)detailStr{
+ 
+    [[MAHUDTool sharedMAHUDTool]showHUDInView:nil withString:str detailString:detailStr];
+    
+   [self performSelector:@selector(hideHUD) withObject:self afterDelay:2.0];
+   
+}
+- (void)hideHUD{
+    
+    [[MAHUDTool sharedMAHUDTool]hideHUD];
+    
+}
 @end

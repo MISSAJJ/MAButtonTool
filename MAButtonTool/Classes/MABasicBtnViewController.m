@@ -29,29 +29,7 @@
     
     //顶部右边的 block 按钮
     [self rightTopBlockBtn];
-    
-    //顶部右边的按钮
-    //[self rightTopBtn];
-    
-    
-    
-//    //创建自定义图片按钮
-//    UIButton * customBtn = [MAButtonTool createButton:@"114"];
-//    customBtn.center = self.view.center;
-//    [customBtn addTarget:self action:@selector(shareMethod) forControlEvents:UIControlEventTouchUpInside];
-//    
-//    [self.view addSubview:customBtn];
-//    
-//    
-//    
-//    //block方式创建图片按钮
-//    UIButton * blockBtn1 = [MAButtonTool createBlockButton:@"MADesignNote_Work_2.JPG" :^(UIButton *btn) {
-//        
-//        [self shareMethod];
-//    }];
-//    
-//    blockBtn1.frame = CGRectMake(customBtn.frame.origin.x -50 , customBtn.frame.origin.y + 100, customBtn.frame.size.width + 100, customBtn.frame.size.height + 150);
-//    [self.view addSubview:blockBtn1];
+ 
     
     
 }
@@ -59,10 +37,14 @@
 #pragma mark ==顶部左边的按钮==
 - (void)leftTopBtn
 {
-    self.navigationItem.leftBarButtonItem = [MAButtonTool createButtonWithImage:@"list" position:MAButtonToolPostionLeft target:self action:@selector(shareMethod) type:MAButtonToolTypeCustom];
+    self.navigationItem.leftBarButtonItem = [MAButtonTool createButtonWithImage:@"list" position:MAButtonToolPostionLeft target:self action:@selector(clickCustomButton) type:MAButtonToolTypeCustom];
 }
 
-
+- (void)clickCustomButton
+{
+    [self showHUDText:@"Left Custom UIBarButtonItem" detailStr:@"+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type"];
+    
+}
 #pragma mark ==单独创建自定义按钮==
 - (void)customleftTopBtn
 {
@@ -84,8 +66,8 @@
     self.navigationItem.rightBarButtonItem =
     [MAButtonTool createButtonWithImage:nil position:MAButtonToolPostionRight type:MAButtonToolTypeShare actionBlock:^(UIButton *btn) {
         
-        [self shareMethod];
-        NSLog(@"rightTopBlockBtn");
+       [self showHUDText:@"Right Block UIBarButtonItem" detailStr:@"+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block"];
+      
         
     }];
 }

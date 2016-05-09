@@ -10,7 +10,9 @@
 
 @interface MABaseViewController : UIViewController
 
+//分享模式
 - (void)shareMethod;
-
+//显示HUD详情文字
+- (void)showHUDText:(NSString*)str detailStr:(NSString*)detailStr;
 @end
 

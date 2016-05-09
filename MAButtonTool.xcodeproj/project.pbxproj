@@ -7,34 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C7476FC1CE0495400620D9E /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7476F31CE0495400620D9E /* MABaseViewController.m */; };
+		1C7476FD1CE0495400620D9E /* MABasicBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7476F51CE0495400620D9E /* MABasicBtnViewController.m */; };
+		1C7476FE1CE0495400620D9E /* MABlockBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7476F71CE0495400620D9E /* MABlockBtnViewController.m */; };
+		1C7476FF1CE0495400620D9E /* MAFontAwesomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7476F91CE0495400620D9E /* MAFontAwesomeViewController.m */; };
+		1C7477001CE0495400620D9E /* MAMoreItemsBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7476FB1CE0495400620D9E /* MAMoreItemsBtnViewController.m */; };
+		1C7477331CE063BC00620D9E /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7477231CE063BC00620D9E /* FAImageView.m */; };
+		1C7477341CE063BC00620D9E /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1C7477241CE063BC00620D9E /* FontAwesome.ttf */; };
+		1C7477351CE063BC00620D9E /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7477261CE063BC00620D9E /* NSString+FontAwesome.m */; };
+		1C7477361CE063BC00620D9E /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7477281CE063BC00620D9E /* UIFont+FontAwesome.m */; };
+		1C7477371CE063BC00620D9E /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C74772A1CE063BC00620D9E /* UIImage+FontAwesome.m */; };
+		1C7477381CE063BC00620D9E /* MAHUDTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C74772E1CE063BC00620D9E /* MAHUDTool.m */; };
+		1C7477391CE063BC00620D9E /* MBProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 1C7477311CE063BC00620D9E /* MBProgressHUD.m */; };
 		1CC61C791CB2C10D00AB447A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C781CB2C10D00AB447A /* main.m */; };
 		1CC61C7C1CB2C10D00AB447A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C7B1CB2C10D00AB447A /* AppDelegate.m */; };
-		1CC61C7F1CB2C10D00AB447A /* MABaseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C7E1CB2C10D00AB447A /* MABaseViewController.m */; };
 		1CC61C821CB2C10D00AB447A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC61C801CB2C10D00AB447A /* Main.storyboard */; };
 		1CC61C841CB2C10D00AB447A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1CC61C831CB2C10D00AB447A /* Assets.xcassets */; };
 		1CC61C871CB2C10D00AB447A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1CC61C851CB2C10D00AB447A /* LaunchScreen.storyboard */; };
 		1CC61C931CB2C14800AB447A /* MAButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C901CB2C14800AB447A /* MAButtonTool.m */; };
 		1CC61C971CB2C1C100AB447A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC61C961CB2C1C100AB447A /* UIKit.framework */; };
 		1CC61C9A1CB2D45A00AB447A /* UIButton+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C991CB2D45A00AB447A /* UIButton+block.m */; };
-		1CFFE8121CDE322000A366AD /* FAImageView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80A1CDE322000A366AD /* FAImageView.m */; };
-		1CFFE8131CDE322000A366AD /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */; };
-		1CFFE8141CDE322000A366AD /* NSString+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */; };
-		1CFFE8151CDE322000A366AD /* UIFont+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */; };
-		1CFFE8161CDE322000A366AD /* UIImage+FontAwesome.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */; };
-		1CFFE8191CDE369900A366AD /* MAFontAwesomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */; };
-		441FE30B1CB37CFC009ECF6A /* MABlockBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */; };
-		441FE30E1CB37D1F009ECF6A /* MABasicBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE30D1CB37D1F009ECF6A /* MABasicBtnViewController.m */; };
-		441FE3111CB37D40009ECF6A /* MAMoreItemsBtnViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 441FE3101CB37D40009ECF6A /* MAMoreItemsBtnViewController.m */; };
 		441FE3131CB37ECA009ECF6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C7476F21CE0495400620D9E /* MABaseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABaseViewController.h; sourceTree = "<group>"; };
+		1C7476F31CE0495400620D9E /* MABaseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABaseViewController.m; sourceTree = "<group>"; };
+		1C7476F41CE0495400620D9E /* MABasicBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABasicBtnViewController.h; sourceTree = "<group>"; };
+		1C7476F51CE0495400620D9E /* MABasicBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABasicBtnViewController.m; sourceTree = "<group>"; };
+		1C7476F61CE0495400620D9E /* MABlockBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABlockBtnViewController.h; sourceTree = "<group>"; };
+		1C7476F71CE0495400620D9E /* MABlockBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABlockBtnViewController.m; sourceTree = "<group>"; };
+		1C7476F81CE0495400620D9E /* MAFontAwesomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFontAwesomeViewController.h; sourceTree = "<group>"; };
+		1C7476F91CE0495400620D9E /* MAFontAwesomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFontAwesomeViewController.m; sourceTree = "<group>"; };
+		1C7476FA1CE0495400620D9E /* MAMoreItemsBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMoreItemsBtnViewController.h; sourceTree = "<group>"; };
+		1C7476FB1CE0495400620D9E /* MAMoreItemsBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMoreItemsBtnViewController.m; sourceTree = "<group>"; };
+		1C74771F1CE04A4A00620D9E /* PrefixHeader.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		1C7477221CE063BC00620D9E /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
+		1C7477231CE063BC00620D9E /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
+		1C7477241CE063BC00620D9E /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
+		1C7477251CE063BC00620D9E /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
+		1C7477261CE063BC00620D9E /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
+		1C7477271CE063BC00620D9E /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
+		1C7477281CE063BC00620D9E /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
+		1C7477291CE063BC00620D9E /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
+		1C74772A1CE063BC00620D9E /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
+		1C74772D1CE063BC00620D9E /* MAHUDTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAHUDTool.h; sourceTree = "<group>"; };
+		1C74772E1CE063BC00620D9E /* MAHUDTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAHUDTool.m; sourceTree = "<group>"; };
+		1C7477301CE063BC00620D9E /* MBProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBProgressHUD.h; sourceTree = "<group>"; };
+		1C7477311CE063BC00620D9E /* MBProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBProgressHUD.m; sourceTree = "<group>"; };
+		1C7477321CE063BC00620D9E /* MASingleton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MASingleton.h; sourceTree = "<group>"; };
 		1CC61C741CB2C10C00AB447A /* MAButtonTool.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MAButtonTool.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1CC61C781CB2C10D00AB447A /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		1CC61C7A1CB2C10D00AB447A /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		1CC61C7B1CB2C10D00AB447A /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		1CC61C7D1CB2C10D00AB447A /* MABaseViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MABaseViewController.h; sourceTree = "<group>"; };
-		1CC61C7E1CB2C10D00AB447A /* MABaseViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MABaseViewController.m; sourceTree = "<group>"; };
 		1CC61C811CB2C10D00AB447A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1CC61C831CB2C10D00AB447A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1CC61C861CB2C10D00AB447A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,23 +69,6 @@
 		1CC61C961CB2C1C100AB447A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CC61C981CB2D45A00AB447A /* UIButton+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+block.h"; sourceTree = "<group>"; };
 		1CC61C991CB2D45A00AB447A /* UIButton+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+block.m"; sourceTree = "<group>"; };
-		1CFFE8091CDE322000A366AD /* FAImageView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FAImageView.h; sourceTree = "<group>"; };
-		1CFFE80A1CDE322000A366AD /* FAImageView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FAImageView.m; sourceTree = "<group>"; };
-		1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = FontAwesome.ttf; sourceTree = "<group>"; };
-		1CFFE80C1CDE322000A366AD /* NSString+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+FontAwesome.h"; sourceTree = "<group>"; };
-		1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+FontAwesome.m"; sourceTree = "<group>"; };
-		1CFFE80E1CDE322000A366AD /* UIFont+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIFont+FontAwesome.h"; sourceTree = "<group>"; };
-		1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIFont+FontAwesome.m"; sourceTree = "<group>"; };
-		1CFFE8101CDE322000A366AD /* UIImage+FontAwesome.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+FontAwesome.h"; sourceTree = "<group>"; };
-		1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+FontAwesome.m"; sourceTree = "<group>"; };
-		1CFFE8171CDE369900A366AD /* MAFontAwesomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAFontAwesomeViewController.h; sourceTree = "<group>"; };
-		1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAFontAwesomeViewController.m; sourceTree = "<group>"; };
-		441FE3091CB37CFC009ECF6A /* MABlockBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABlockBtnViewController.h; sourceTree = "<group>"; };
-		441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABlockBtnViewController.m; sourceTree = "<group>"; };
-		441FE30C1CB37D1F009ECF6A /* MABasicBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MABasicBtnViewController.h; sourceTree = "<group>"; };
-		441FE30D1CB37D1F009ECF6A /* MABasicBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MABasicBtnViewController.m; sourceTree = "<group>"; };
-		441FE30F1CB37D40009ECF6A /* MAMoreItemsBtnViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MAMoreItemsBtnViewController.h; sourceTree = "<group>"; };
-		441FE3101CB37D40009ECF6A /* MAMoreItemsBtnViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MAMoreItemsBtnViewController.m; sourceTree = "<group>"; };
 		441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -77,12 +85,82 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1C7476F11CE0495400620D9E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				1C7476F21CE0495400620D9E /* MABaseViewController.h */,
+				1C7476F31CE0495400620D9E /* MABaseViewController.m */,
+				1C7476F41CE0495400620D9E /* MABasicBtnViewController.h */,
+				1C7476F51CE0495400620D9E /* MABasicBtnViewController.m */,
+				1C7476F61CE0495400620D9E /* MABlockBtnViewController.h */,
+				1C7476F71CE0495400620D9E /* MABlockBtnViewController.m */,
+				1C7476FA1CE0495400620D9E /* MAMoreItemsBtnViewController.h */,
+				1C7476FB1CE0495400620D9E /* MAMoreItemsBtnViewController.m */,
+				1C7476F81CE0495400620D9E /* MAFontAwesomeViewController.h */,
+				1C7476F91CE0495400620D9E /* MAFontAwesomeViewController.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		1C7477201CE063BC00620D9E /* Libs */ = {
+			isa = PBXGroup;
+			children = (
+				1C7477211CE063BC00620D9E /* FontAwesome */,
+				1C74772B1CE063BC00620D9E /* MATools */,
+			);
+			path = Libs;
+			sourceTree = "<group>";
+		};
+		1C7477211CE063BC00620D9E /* FontAwesome */ = {
+			isa = PBXGroup;
+			children = (
+				1C7477221CE063BC00620D9E /* FAImageView.h */,
+				1C7477231CE063BC00620D9E /* FAImageView.m */,
+				1C7477241CE063BC00620D9E /* FontAwesome.ttf */,
+				1C7477251CE063BC00620D9E /* NSString+FontAwesome.h */,
+				1C7477261CE063BC00620D9E /* NSString+FontAwesome.m */,
+				1C7477271CE063BC00620D9E /* UIFont+FontAwesome.h */,
+				1C7477281CE063BC00620D9E /* UIFont+FontAwesome.m */,
+				1C7477291CE063BC00620D9E /* UIImage+FontAwesome.h */,
+				1C74772A1CE063BC00620D9E /* UIImage+FontAwesome.m */,
+			);
+			path = FontAwesome;
+			sourceTree = "<group>";
+		};
+		1C74772B1CE063BC00620D9E /* MATools */ = {
+			isa = PBXGroup;
+			children = (
+				1C74772C1CE063BC00620D9E /* MAHUDTool */,
+				1C7477321CE063BC00620D9E /* MASingleton.h */,
+			);
+			path = MATools;
+			sourceTree = "<group>";
+		};
+		1C74772C1CE063BC00620D9E /* MAHUDTool */ = {
+			isa = PBXGroup;
+			children = (
+				1C74772D1CE063BC00620D9E /* MAHUDTool.h */,
+				1C74772E1CE063BC00620D9E /* MAHUDTool.m */,
+				1C74772F1CE063BC00620D9E /* MBProgrss */,
+			);
+			path = MAHUDTool;
+			sourceTree = "<group>";
+		};
+		1C74772F1CE063BC00620D9E /* MBProgrss */ = {
+			isa = PBXGroup;
+			children = (
+				1C7477301CE063BC00620D9E /* MBProgressHUD.h */,
+				1C7477311CE063BC00620D9E /* MBProgressHUD.m */,
+			);
+			path = MBProgrss;
+			sourceTree = "<group>";
+		};
 		1CC61C6B1CB2C10C00AB447A = {
 			isa = PBXGroup;
 			children = (
-				441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */,
 				1CC61C761CB2C10D00AB447A /* MAButtonTool */,
 				1CC61C961CB2C1C100AB447A /* UIKit.framework */,
+				441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */,
 				1CC61C751CB2C10C00AB447A /* Products */,
 			);
 			sourceTree = "<group>";
@@ -98,24 +176,16 @@
 		1CC61C761CB2C10D00AB447A /* MAButtonTool */ = {
 			isa = PBXGroup;
 			children = (
-				1CFFE8081CDE322000A366AD /* FontAwesome */,
+				1C7477201CE063BC00620D9E /* Libs */,
 				1CC61C8E1CB2C14800AB447A /* MAButtonTool */,
+				1C7476F11CE0495400620D9E /* Classes */,
 				1CC61C7A1CB2C10D00AB447A /* AppDelegate.h */,
 				1CC61C7B1CB2C10D00AB447A /* AppDelegate.m */,
-				1CC61C7D1CB2C10D00AB447A /* MABaseViewController.h */,
-				1CC61C7E1CB2C10D00AB447A /* MABaseViewController.m */,
-				441FE30C1CB37D1F009ECF6A /* MABasicBtnViewController.h */,
-				441FE30D1CB37D1F009ECF6A /* MABasicBtnViewController.m */,
-				441FE3091CB37CFC009ECF6A /* MABlockBtnViewController.h */,
-				441FE30A1CB37CFC009ECF6A /* MABlockBtnViewController.m */,
-				441FE30F1CB37D40009ECF6A /* MAMoreItemsBtnViewController.h */,
-				441FE3101CB37D40009ECF6A /* MAMoreItemsBtnViewController.m */,
-				1CFFE8171CDE369900A366AD /* MAFontAwesomeViewController.h */,
-				1CFFE8181CDE369900A366AD /* MAFontAwesomeViewController.m */,
 				1CC61C801CB2C10D00AB447A /* Main.storyboard */,
 				1CC61C831CB2C10D00AB447A /* Assets.xcassets */,
 				1CC61C851CB2C10D00AB447A /* LaunchScreen.storyboard */,
 				1CC61C881CB2C10D00AB447A /* Info.plist */,
+				1C74771F1CE04A4A00620D9E /* PrefixHeader.pch */,
 				1CC61C771CB2C10D00AB447A /* Supporting Files */,
 			);
 			path = MAButtonTool;
@@ -138,22 +208,6 @@
 				1CC61C901CB2C14800AB447A /* MAButtonTool.m */,
 			);
 			path = MAButtonTool;
-			sourceTree = "<group>";
-		};
-		1CFFE8081CDE322000A366AD /* FontAwesome */ = {
-			isa = PBXGroup;
-			children = (
-				1CFFE8091CDE322000A366AD /* FAImageView.h */,
-				1CFFE80A1CDE322000A366AD /* FAImageView.m */,
-				1CFFE80B1CDE322000A366AD /* FontAwesome.ttf */,
-				1CFFE80C1CDE322000A366AD /* NSString+FontAwesome.h */,
-				1CFFE80D1CDE322000A366AD /* NSString+FontAwesome.m */,
-				1CFFE80E1CDE322000A366AD /* UIFont+FontAwesome.h */,
-				1CFFE80F1CDE322000A366AD /* UIFont+FontAwesome.m */,
-				1CFFE8101CDE322000A366AD /* UIImage+FontAwesome.h */,
-				1CFFE8111CDE322000A366AD /* UIImage+FontAwesome.m */,
-			);
-			path = FontAwesome;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -217,7 +271,7 @@
 				1CC61C871CB2C10D00AB447A /* LaunchScreen.storyboard in Resources */,
 				1CC61C841CB2C10D00AB447A /* Assets.xcassets in Resources */,
 				1CC61C821CB2C10D00AB447A /* Main.storyboard in Resources */,
-				1CFFE8131CDE322000A366AD /* FontAwesome.ttf in Resources */,
+				1C7477341CE063BC00620D9E /* FontAwesome.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,19 +282,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1CFFE8141CDE322000A366AD /* NSString+FontAwesome.m in Sources */,
-				1CFFE8121CDE322000A366AD /* FAImageView.m in Sources */,
-				1CFFE8191CDE369900A366AD /* MAFontAwesomeViewController.m in Sources */,
+				1C7476FF1CE0495400620D9E /* MAFontAwesomeViewController.m in Sources */,
 				1CC61C9A1CB2D45A00AB447A /* UIButton+block.m in Sources */,
-				1CC61C7F1CB2C10D00AB447A /* MABaseViewController.m in Sources */,
-				1CFFE8151CDE322000A366AD /* UIFont+FontAwesome.m in Sources */,
 				1CC61C931CB2C14800AB447A /* MAButtonTool.m in Sources */,
+				1C7476FE1CE0495400620D9E /* MABlockBtnViewController.m in Sources */,
+				1C7477351CE063BC00620D9E /* NSString+FontAwesome.m in Sources */,
+				1C7477001CE0495400620D9E /* MAMoreItemsBtnViewController.m in Sources */,
 				1CC61C7C1CB2C10D00AB447A /* AppDelegate.m in Sources */,
-				441FE30E1CB37D1F009ECF6A /* MABasicBtnViewController.m in Sources */,
-				1CFFE8161CDE322000A366AD /* UIImage+FontAwesome.m in Sources */,
+				1C7477391CE063BC00620D9E /* MBProgressHUD.m in Sources */,
 				1CC61C791CB2C10D00AB447A /* main.m in Sources */,
-				441FE30B1CB37CFC009ECF6A /* MABlockBtnViewController.m in Sources */,
-				441FE3111CB37D40009ECF6A /* MAMoreItemsBtnViewController.m in Sources */,
+				1C7477331CE063BC00620D9E /* FAImageView.m in Sources */,
+				1C7477371CE063BC00620D9E /* UIImage+FontAwesome.m in Sources */,
+				1C7476FD1CE0495400620D9E /* MABasicBtnViewController.m in Sources */,
+				1C7476FC1CE0495400620D9E /* MABaseViewController.m in Sources */,
+				1C7477361CE063BC00620D9E /* UIFont+FontAwesome.m in Sources */,
+				1C7477381CE063BC00620D9E /* MAHUDTool.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -357,7 +413,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MAButtonTool/PrefixHeader.pch";
 				INFOPLIST_FILE = MAButtonTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -376,7 +432,7 @@
 				ENABLE_BITCODE = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "";
+				GCC_PREFIX_HEADER = "$(SRCROOT)/MAButtonTool/PrefixHeader.pch";
 				INFOPLIST_FILE = MAButtonTool/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
