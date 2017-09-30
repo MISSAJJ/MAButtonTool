@@ -13,9 +13,7 @@ typedef void(^ButtonBlock)(UIButton* btn);
 
 @interface UIButton (block)
 
-//添加block
 - (void)addTouchAction:(ButtonBlock )block;
-//添加有不同事件的block
 - (void)addTouchAction:(ButtonBlock)block forControlEvents:(UIControlEvents)controlEvents;
 
 @end

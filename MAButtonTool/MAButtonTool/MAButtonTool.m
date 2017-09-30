@@ -26,27 +26,50 @@
  */
 #import "MAButtonTool.h"
 #import "UIButton+block.h"
-@implementation MAButtonTool 
+#import "UIImage+RTTint.h"
+@implementation MAButtonTool
 
+
+#pragma mark ==[自定义文字圆角按钮--block]==
++ (UIButton *)createTextButton:(NSString *)title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor cornerRadius:(CGFloat)cornerRadius  :(ButtonBlock)block{
+   
+    UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [btn setTitle:title forState:UIControlStateNormal];
+    [btn setTitleColor:titleColor forState:UIControlStateNormal];
+    [btn setBackgroundColor:backgroundColor];
+    [btn setShowsTouchWhenHighlighted:YES];
+    [btn setAdjustsImageWhenHighlighted:YES];
+    //设置圆角
+    btn.layer.cornerRadius = cornerRadius;
+    btn.clipsToBounds = YES;
+    [btn addTouchAction:^(UIButton *btn) {
+        
+        if (block)
+        {
+            block(btn);
+        }
+        
+    }];
+    return btn;
+}
 #pragma mark ==[自定义图片按钮]==
 + (UIButton *)createButton:(id)imageStr
 {
-    
     UIButton* btn= [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 40, 40);
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
     
     //判定UIImage图片或NSString
     if ([imageStr isKindOfClass:[UIImage class]]) {
-      [btn setImage:imageStr forState:UIControlStateNormal];
+        [btn setImage:imageStr forState:UIControlStateNormal];
         
     }else{
-    UIImage * image = [UIImage imageNamed:imageStr];
-    [btn setImage:image forState:UIControlStateNormal];
+        UIImage * image = [UIImage imageNamed:imageStr];
+        [btn setImage:image forState:UIControlStateNormal];
     }
     //按钮发光
     [btn setShowsTouchWhenHighlighted:YES];
-    [btn setAdjustsImageWhenHighlighted:YES]; 
+    [btn setAdjustsImageWhenHighlighted:YES];
     return btn;
 }
 
@@ -79,16 +102,44 @@
     
     return btn;
 }
-#pragma mark ==[左按钮]==
-+ (UIButton *)createLeftButton:(id)imageStr
+
+#pragma mark ==[创建自定义 Block 图片+背景按钮]==
++ (UIButton *)createImageWithBackgroundColorBlockButton:(NSString *)imageStr imageColor:(UIColor *)imageColor backColor: (UIColor *)backColor :(ButtonBlock)block
 {
-    UIButton* btn= [self createButton:imageStr];
+    UIImage * image = [UIImage imageNamed:imageStr];
+    if (imageColor != nil) {
+        image =  [[image rt_tintedImageWithColor:imageColor]imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal];
+    }
+    
+    UIButton* btn= [UIButton buttonWithType:UIButtonTypeCustom];
+    btn.frame = CGRectMake(0, 0, 40, 40);
+    [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 0, 0, 0)];
+    [btn setBackgroundColor:backColor];
+    //[btn setBackgroundImage:image forState:UIControlStateNormal];
+    [btn setImage:image forState:UIControlStateNormal];
+    [btn setShowsTouchWhenHighlighted:YES];
+      [btn setAdjustsImageWhenHighlighted:YES];
+    [btn addTouchAction:^(UIButton *btn) {
+        
+        if (block)
+        {
+            block(btn);
+        }
+        
+    }];
+    
+    return btn;
+}
+#pragma mark ==[左自定义图片按钮]==
++ (UIButton *)createLeftButton:(NSString *)imageStr
+{
+    UIButton* btn= [self createButton:imageStr]; 
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, -10, 0, 10)];
     return btn;
 }
 
-#pragma mark ==[右按钮]==
-+ (UIButton*)createRightButton:(id)imageStr
+#pragma mark ==[右自定义图片按钮]==
++ (UIButton*)createRightButton:(NSString*)imageStr
 {
     UIButton* btn=[self createButton:imageStr];
     [btn setImageEdgeInsets:UIEdgeInsetsMake(0, 10, 0, -10)];
@@ -114,8 +165,8 @@
     return btn;
 }
 
-#pragma mark ==[自定义 导航栏 按钮]==
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type
+#pragma mark ==[自定义 导航栏 按钮]==NSString * __nullable 
++(UIBarButtonItem *)createButtonWithImage:(NSString * __nullable)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type
 {
     UIButton* btn;
     
@@ -140,13 +191,16 @@
     }
     
      [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    
-    return [[UIBarButtonItem alloc]initWithCustomView:btn];
+    //针对 iOS11适配改写
+    UIView *containVew = [[UIView alloc] initWithFrame:btn.bounds];
+    [containVew addSubview:btn];
+    return [[UIBarButtonItem alloc]initWithCustomView:containVew];
+   
 }
 
 
 #pragma mark ==[自定义 block 导航栏 按钮]==
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block
++(UIBarButtonItem *)createButtonWithImage:(NSString * __nullable)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block
 {
     UIButton* btn;
     
@@ -178,9 +232,10 @@
         }
         
     }];
-    
-  
-    return [[UIBarButtonItem alloc]initWithCustomView:btn];
+    //针对 iOS11适配改写
+    UIView *containVew = [[UIView alloc] initWithFrame:btn.bounds];
+    [containVew addSubview:btn];
+    return [[UIBarButtonItem alloc]initWithCustomView:containVew];
 }
 
 
@@ -188,14 +243,18 @@
 + (UIBarButtonItem *)initWithTitle:(NSString *)title titleColor:(UIColor *)titleColor target:(id)target action:(SEL)action
 {
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
-    btn.frame = CGRectMake(0, 0, 40, 40);
+    btn.frame = CGRectMake(0, 0, 50, 50);
+    btn.contentEdgeInsets = UIEdgeInsetsMake(0, 0, 0, 0);
     [btn setTitle:title forState:UIControlStateNormal];
+    btn.titleLabel.font = [UIFont systemFontOfSize:TITLEFONTSIZE];
     [btn setTitleColor:titleColor forState:UIControlStateNormal];
     [btn addTarget:target action:action forControlEvents:UIControlEventTouchUpInside];
-    
-    UIBarButtonItem *item = [[UIBarButtonItem alloc] initWithCustomView:btn];
-    return item;
-    
+    [btn setShowsTouchWhenHighlighted:YES];
+    [btn setAdjustsImageWhenHighlighted:YES];
+    //针对 iOS11适配改写
+    UIView *containVew = [[UIView alloc] initWithFrame:btn.bounds];
+    [containVew addSubview:btn];
+    return [[UIBarButtonItem alloc]initWithCustomView:containVew];
     
 }
 

@@ -27,6 +27,7 @@
 		1CC61C931CB2C14800AB447A /* MAButtonTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C901CB2C14800AB447A /* MAButtonTool.m */; };
 		1CC61C971CB2C1C100AB447A /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1CC61C961CB2C1C100AB447A /* UIKit.framework */; };
 		1CC61C9A1CB2D45A00AB447A /* UIButton+block.m in Sources */ = {isa = PBXBuildFile; fileRef = 1CC61C991CB2D45A00AB447A /* UIButton+block.m */; };
+		4412190C1F7F5D31000DF0AA /* UIImage+RTTint.m in Sources */ = {isa = PBXBuildFile; fileRef = 4412190B1F7F5D30000DF0AA /* UIImage+RTTint.m */; };
 		441FE3131CB37ECA009ECF6A /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,8 @@
 		1CC61C961CB2C1C100AB447A /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		1CC61C981CB2D45A00AB447A /* UIButton+block.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIButton+block.h"; sourceTree = "<group>"; };
 		1CC61C991CB2D45A00AB447A /* UIButton+block.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIButton+block.m"; sourceTree = "<group>"; };
+		4412190A1F7F5D30000DF0AA /* UIImage+RTTint.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIImage+RTTint.h"; sourceTree = "<group>"; };
+		4412190B1F7F5D30000DF0AA /* UIImage+RTTint.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIImage+RTTint.m"; sourceTree = "<group>"; };
 		441FE3121CB37ECA009ECF6A /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -114,6 +117,8 @@
 		1C7477211CE063BC00620D9E /* FontAwesome */ = {
 			isa = PBXGroup;
 			children = (
+				4412190A1F7F5D30000DF0AA /* UIImage+RTTint.h */,
+				4412190B1F7F5D30000DF0AA /* UIImage+RTTint.m */,
 				1C7477221CE063BC00620D9E /* FAImageView.h */,
 				1C7477231CE063BC00620D9E /* FAImageView.m */,
 				1C7477241CE063BC00620D9E /* FontAwesome.ttf */,
@@ -242,6 +247,7 @@
 				TargetAttributes = {
 					1CC61C731CB2C10C00AB447A = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = WTB894PW5R;
 					};
 				};
 			};
@@ -294,6 +300,7 @@
 				1C7477331CE063BC00620D9E /* FAImageView.m in Sources */,
 				1C7477371CE063BC00620D9E /* UIImage+FontAwesome.m in Sources */,
 				1C7476FD1CE0495400620D9E /* MABasicBtnViewController.m in Sources */,
+				4412190C1F7F5D31000DF0AA /* UIImage+RTTint.m in Sources */,
 				1C7476FC1CE0495400620D9E /* MABaseViewController.m in Sources */,
 				1C7477361CE063BC00620D9E /* UIFont+FontAwesome.m in Sources */,
 				1C7477381CE063BC00620D9E /* MAHUDTool.m in Sources */,
@@ -410,6 +417,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WTB894PW5R;
 				ENABLE_BITCODE = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
@@ -429,6 +437,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = WTB894PW5R;
 				ENABLE_BITCODE = YES;
 				GCC_INCREASE_PRECOMPILED_HEADER_SHARING = NO;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;

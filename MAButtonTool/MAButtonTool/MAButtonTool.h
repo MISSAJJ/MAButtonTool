@@ -4,8 +4,7 @@
 //  Copyright © 2016年 MISSAJJ. All rights reserved.
 //
 /**
-   @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  16-04-08 03:37:43
-  
+   @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  2017-3-22
      为了节约时间,提高创建按钮控件的效率,特抽出一个创建各种按钮的类方法
  */
 
@@ -16,18 +15,18 @@
 typedef void(^ButtonBlock)(UIButton* btn);
 typedef void(^ButtonItemBlock)(UIButton* btn);
 /** 按钮样式 */
-typedef NS_ENUM(NSInteger,MAButtonToolType) {
+typedef enum {
     MAButtonToolTypeCustom,   //自定义
     MAButtonToolTypeShare,    //分享按钮
     MAButtonToolTypeBack,  //返回按钮
-};
+}MAButtonToolType;
 
 /** 位置样式 */
-typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
+typedef enum {
     MAButtonToolPostionMiddle,  //中间
     MAButtonToolPostionLeft,    //左边
     MAButtonToolPostionRight,   //右边
-};
+}MAButtonToolPostion;
 
 @interface MAButtonTool : NSObject
 /**
@@ -36,22 +35,30 @@ typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
 @property (nonatomic,assign)MAButtonToolType type;
 
 /**
- *  自定义图片按钮  ， 请传递UIImage或者NSString
+ *  自定义文字圆角按钮--block
+ */
++ (UIButton *)createTextButton:(NSString * )title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor cornerRadius:(CGFloat )cornerRadius :(ButtonBlock)block;
+
+/**
+ *  自定义图片按钮
  */
 + (UIButton *)createButton:(id)imageStr;
 
  /**
- *  创建自定义 Block 图片按钮  ， 请传递UIImage或者NSString
+ *  创建自定义 Block 图片按钮
  */
-+ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block;
++ (UIButton *)createBlockButton:(id )imageStr :(ButtonBlock)block;
+
+#pragma mark ==[创建自定义 Block 图片+背景按钮]==
++ (UIButton *)createImageWithBackgroundColorBlockButton:(NSString *)imageStr imageColor:(UIColor *)imageColor backColor: (UIColor *)backColor :(ButtonBlock)block;
 /**
- *  左按钮  ， 请传递UIImage或者NSString
+ *  左自定义 图片按钮
  */
-+(UIButton *)createLeftButton:(id)imageStr;
++(UIButton *)createLeftButton:(NSString *)imageStr;
 /**
- *  右按钮  ， 请传递UIImage或者NSString
+ *  右自定义 图片按钮
  */
-+(UIButton*)createRightButton:(id)imageStr;
++(UIButton*)createRightButton:(NSString*)imageStr;
 /**
  *  左返回按钮
  */
@@ -61,13 +68,13 @@ typedef NS_ENUM(NSInteger,MAButtonToolPostion) {
  */
 +(UIButton*)createRightShareButton;
 /**
- *  自定义 导航栏 按钮 ， 请传递UIImage或者NSString
+ *  自定义 导航栏 按钮
  */
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
 /**
- *  自定义 block 导航栏 按钮  ， 请传递UIImage或者NSString
+ *  自定义 block 导航栏 按钮
  */
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
 /**
  *  自定义 文字按钮
  */
