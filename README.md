@@ -8,7 +8,7 @@
 
 
  
-###前言
+### 前言
 
 ![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MISSAJJ_1.JPG)
 
@@ -33,7 +33,7 @@
 _____________MISSAJJ  
 
 
-###更新日期
+### 更新日期
 
 更新日期: 2017-09-30 14:11  （ 版本号 1.4 Build5 ）
 
@@ -97,7 +97,7 @@ _____________MISSAJJ
 
 ---
 
-###Why?为什么要写这个工具类？
+### Why?为什么要写这个工具类？
 
 
 为了节约时间,提高创建按钮控件的效率,特抽出一个创建各种按钮的类方法
@@ -126,14 +126,14 @@ _____________MISSAJJ
 
 11，增加自定义文字圆角按钮
 
-###Demo演示（GIF动画演示图有1.5M,请耐心等待demo动画加载）
+### Demo演示（GIF动画演示图有1.5M,请耐心等待demo动画加载）
 
 
 
 ![Pic](https://github.com/MISSAJJ/MAButtonTool/blob/master/MAButtonTool2.gif)
 
 
-###请求方法和样式概览################################################
+### 请求方法和样式概览################################################
  
 
 ```objective-c
@@ -205,7 +205,7 @@ MAButtonToolPostionRight,   //右边
 ```
 
 
-###自定义渲染block按钮的icon颜色和icon背景颜色################################################
+### 自定义渲染block按钮的icon颜色和icon背景颜色################################################
 
 ```
 UIButton * btn = [MAButtonTool createImageWithBackgroundColorBlockButton:@"eye32-black" imageColor:[UIColor whiteColor] backColor:[UIColor colorWithHexString:@"0080ff"]  :^(UIButton *btn) {
@@ -217,7 +217,7 @@ UIButton * btn = [MAButtonTool createImageWithBackgroundColorBlockButton:@"eye32
 imageStr:为透明icon图片名, imageColor:icon需要渲染的颜色,backColor:按钮图片的背景色
 
 ```
-###FontAwesome 使用方法################################################
+### FontAwesome 使用方法################################################
 
 
 （请耐心等待图片加载） 
@@ -280,7 +280,7 @@ NSLog(@"rightTopFontAwesomeBlockBtn");
 ```
 
 
-###IOS原生按钮的创建使用方法案例################################################
+### IOS原生按钮的创建使用方法案例################################################
 
 
 ```objective-c
@@ -397,7 +397,7 @@ NSLog(@"rightTopBlockBtn");
 
 
 
-###Other其他
+### Other其他
 
 
 很希望能和大咖们一起快乐地奔跑,不再是一个孤独的攻城狮，
