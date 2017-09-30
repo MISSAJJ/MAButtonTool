@@ -34,6 +34,16 @@ _____________MISSAJJ
 
 
 ###更新日期
+
+更新日期: 2017-09-30 14:11  （ 版本号 1.4 Build5 ）
+
+1、针对 iOS11适配
+
+2、增加自定义渲染block按钮的icon颜色和icon背景颜色
+
+3、增加自定义文字圆角按钮
+
+---
 更新日期: 16-05-09 14:11  （ 版本号 1.3 Build4 ）
 
 1、调整Demo文件夹分类
@@ -104,10 +114,17 @@ _____________MISSAJJ
 
 5,由于美工给的图片素材尺寸会不同,所以按钮的frame和setImageEdgeInsets可根据项目素材情况在VC层创建后重写调整
 
-6，支持导航栏多个按钮创建
+6，支持block调用按钮事件
 
-7，支持FontAwesome图标创建按钮 
+7，支持导航栏多个按钮创建
 
+8，支持FontAwesome图标创建按钮
+
+9，针对 iOS11适配
+
+10，增加自定义渲染block按钮的icon颜色和icon背景颜色
+
+11，增加自定义文字圆角按钮
 
 ###Demo演示（GIF动画演示图有1.5M,请耐心等待demo动画加载）
 
@@ -139,22 +156,30 @@ MAButtonToolPostionRight,   //右边
  
 
 /**
-*  自定义图片按钮  ， 请传递UIImage或者NSString
+*  自定义文字圆角按钮--block
+*/
++ (UIButton *)createTextButton:(NSString * )title titleColor:(UIColor *)titleColor backgroundColor:(UIColor *)backgroundColor cornerRadius:(CGFloat )cornerRadius :(ButtonBlock)block;
+
+/**
+*  自定义图片按钮
 */
 + (UIButton *)createButton:(id)imageStr;
 
 /**
-*  创建自定义 Block 图片按钮  ， 请传递UIImage或者NSString
+*  创建自定义 Block 图片按钮
 */
-+ (UIButton *)createBlockButton:(id)imageStr :(ButtonBlock)block;
++ (UIButton *)createBlockButton:(id )imageStr :(ButtonBlock)block;
+
+#pragma mark ==[创建自定义 Block 图片+背景按钮]==
++ (UIButton *)createImageWithBackgroundColorBlockButton:(NSString *)imageStr imageColor:(UIColor *)imageColor backColor: (UIColor *)backColor :(ButtonBlock)block;
 /**
-*  左按钮  ， 请传递UIImage或者NSString
+*  左自定义 图片按钮
 */
-+(UIButton *)createLeftButton:(id)imageStr;
++(UIButton *)createLeftButton:(NSString *)imageStr;
 /**
-*  右按钮  ， 请传递UIImage或者NSString
+*  右自定义 图片按钮
 */
-+(UIButton*)createRightButton:(id)imageStr;
++(UIButton*)createRightButton:(NSString*)imageStr;
 /**
 *  左返回按钮
 */
@@ -164,13 +189,13 @@ MAButtonToolPostionRight,   //右边
 */
 +(UIButton*)createRightShareButton;
 /**
-*  自定义 导航栏 按钮 ， 请传递UIImage或者NSString
+*  自定义 导航栏 按钮
 */
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position target:(id)target action:(SEL)action type:(MAButtonToolType)type;
 /**
-*  自定义 block 导航栏 按钮  ， 请传递UIImage或者NSString
+*  自定义 block 导航栏 按钮
 */
-+(UIBarButtonItem *)createButtonWithImage:(id)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
++(UIBarButtonItem *)createButtonWithImage:(NSString *)imageStr position:(MAButtonToolPostion)position type:(MAButtonToolType)type actionBlock:(ButtonItemBlock)block;
 /**
 *  自定义 文字按钮
 */
@@ -180,7 +205,18 @@ MAButtonToolPostionRight,   //右边
 ```
 
 
+###自定义渲染block按钮的icon颜色和icon背景颜色################################################
 
+```
+UIButton * btn = [MAButtonTool createImageWithBackgroundColorBlockButton:@"eye32-black" imageColor:[UIColor whiteColor] backColor:[UIColor colorWithHexString:@"0080ff"]  :^(UIButton *btn) {
+
+ //点击按钮后的事件
+
+}];
+
+imageStr:为透明icon图片名, imageColor:icon需要渲染的颜色,backColor:按钮图片的背景色
+
+```
 ###FontAwesome 使用方法################################################
 
 

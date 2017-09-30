@@ -4,7 +4,7 @@
 //  Copyright © 2016年 MISSAJJ. All rights reserved.
 //
 /**
-   @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  2017-3-22
+   @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  2017-9-30
      为了节约时间,提高创建按钮控件的效率,特抽出一个创建各种按钮的类方法
  */
 

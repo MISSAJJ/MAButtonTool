@@ -5,7 +5,7 @@
 //  Copyright © 2016年 MISSAJJ. All rights reserved.
 //
 /**
- @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  16-04-08 03:37:43
+ @author https://github.com/MISSAJJ (MISSAJJ), 更新日期:  2017-9-30
  
  为了节约时间,提高创建按钮控件的效率,特抽出一个创建各种按钮的类方法
  
@@ -16,6 +16,11 @@
  4,只要修改一下分享和返回按钮图片就可以直接应用到项目中了
  5,由于美工给的图片素材尺寸会不同,所以按钮的frame和setImageEdgeInsets可根据项目素材情况在VC层创建后重写调整
  6,支持block调用按钮事件
+ 7,支持导航栏多个按钮创建
+ 8,支持FontAwesome图标创建按钮
+ 9,针对 iOS11适配
+ 10,增加自定义渲染block按钮的icon颜色和icon背景颜色
+ 11,增加自定义文字圆角按钮
  
  
  另： 导航栏左右多个按钮创建［后续抽空再实现吧］
